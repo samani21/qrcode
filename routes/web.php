@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/scan', [WelcomController::class,'scan'])->name('scan');
-Route::post('/validasi', [WelcomController::class,'validasi'])->name('validasi');
+Route::get('/validasi/{id}', [WelcomController::class,'validasi'])->name('validasi');

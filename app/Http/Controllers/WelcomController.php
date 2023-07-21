@@ -10,7 +10,17 @@ class WelcomController extends Controller
         return view('/scan');
     }
 
-    public function validasi (Request $request){
-        dd($request->all());
+    public function validasi (Request $request,$id){
+        $qr = $request->id;
+        $data = 39;
+        if($qr == $data){
+            return response()->json([
+                'status'=>200,
+            ]);
+        }else{
+            return response()->json([
+                'status'=>400,
+            ]);
+        }
     }
 }
